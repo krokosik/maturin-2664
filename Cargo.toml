@@ -6,7 +6,7 @@ repository = "https://github.com/krokosik/rustpill"
 description = "RustPill firmware and clients"
 
 [workspace.dependencies]
-pyo3 = "0.24.2"
+pyo3 = "0.25.1"
 
 [workspace]
 resolver = "2"
