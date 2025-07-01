@@ -1,0 +1,13 @@
+[workspace.package]
+version = "0.1.5"
+edition = "2024"
+license-file = "LICENSE"
+repository = "https://github.com/krokosik/rustpill"
+description = "RustPill firmware and clients"
+
+[workspace.dependencies]
+pyo3 = "0.24.2"
+
+[workspace]
+resolver = "2"
+members = ["host"]

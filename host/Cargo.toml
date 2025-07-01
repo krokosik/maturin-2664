@@ -1,0 +1,18 @@
+[package]
+name = "host"
+version.workspace = true
+edition.workspace = true
+license-file.workspace = true
+description = "Python bindings"
+repository.workspace = true
+
+[lib]
+name = "rustpill_clients"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { workspace = true, features = [
+    "extension-module",
+    "experimental-async",
+    "abi3-py39",
+] }
