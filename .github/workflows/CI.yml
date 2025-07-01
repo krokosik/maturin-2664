@@ -26,22 +26,6 @@ jobs:
         platform:
           - runner: ubuntu-22.04
             target: x86_64
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions-rust-lang/setup-rust-toolchain@v1
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
-      - name: Run develop
-        working-directory: host
-        run: uv run maturin develop
-      - name: Check if LICENSE file was deleted
-        run: test -f LICENSE
-
-  windows:
-    runs-on: ${{ matrix.platform.runner }}
-    strategy:
-      matrix:
-        platform:
           - runner: windows-latest
             target: x64
     steps:
@@ -55,4 +39,3 @@ jobs:
       - name: Check if LICENSE file was deleted
         shell: bash
         run: test -f LICENSE
-
