@@ -36,7 +36,6 @@ jobs:
         run: uv run maturin develop
       - name: Check if LICENSE file was deleted
         run: test -f LICENSE
-        continue-on-error: true
 
   windows:
     runs-on: ${{ matrix.platform.runner }}
@@ -56,5 +55,4 @@ jobs:
       - name: Check if LICENSE file was deleted
         shell: bash
         run: test -f LICENSE
-        continue-on-error: true
 
