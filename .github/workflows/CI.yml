@@ -35,7 +35,6 @@ jobs:
         uses: PyO3/maturin-action@v1
         with:
           target: ${{ matrix.platform.target }}
-          args: --release --out dist
           sccache: ${{ !startsWith(github.ref, 'refs/tags/') }}
           manylinux: auto
           working-directory: host
@@ -61,7 +60,6 @@ jobs:
         uses: PyO3/maturin-action@v1
         with:
           target: ${{ matrix.platform.target }}
-          args: --release --out dist
           sccache: ${{ !startsWith(github.ref, 'refs/tags/') }}
           working-directory: host
           command: develop
