@@ -54,6 +54,7 @@ jobs:
         working-directory: host
         run: uv run maturin develop
       - name: Check if LICENSE file was deleted
-        run: Test-Path LICENSE
+        shell: bash
+        run: test -f LICENSE
         continue-on-error: true
 
